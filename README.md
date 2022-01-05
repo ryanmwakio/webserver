@@ -75,5 +75,14 @@ app.use("/", (req, res, next) => {
 //1) We are listening for a post request at the root "/" e.g http://127.0.0.1:8080/
 //2) We set the Content-Type and Content-Length
 //3) We return a response, a html file
-//4) next()...Incase this is not the GET request e.g if the request is a POST, then we funnel it to the next request middleware
+//4) next()...Incase this is not the POST request e.g if the request is a PUT/PATCH/DELETE, then we funnel it to the next request middleware
+```
+
+```javascript
+//The catch all
+app.use("*", (req, res, next) => {
+  return res.status(400).json({ message: "sorry bad request" });
+});
+//1) We are listening for any route or request that has not been processed
+//2) We return a response with status 400
 ```
