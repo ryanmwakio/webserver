@@ -36,8 +36,8 @@ WEBSERVER
 │----   package-lock.json
 ```
 
-<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>[main.js](https://github.com/ryanmwakio/webserver/blob/master/index.js) <span style="color:grey">&nbsp;//This is where the server is running</span><br/>
-<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>.env <span style="color:grey">&nbsp;//some environment variables e.g SERVER_URL="http://127.0.0.1:8080"</span><br><br>
+<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>[main.js](https://github.com/ryanmwakio/webserver/blob/master/index.js) <span style="color:grey">&nbsp;_This is where the server is running_</span><br/>
+<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>.env <span style="color:grey">&nbsp;_some environment variables e.g SERVER_URL="http://127.0.0.1:8080"_</span><br><br>
 
 ---
 
