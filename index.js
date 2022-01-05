@@ -9,10 +9,18 @@ Todos:
 //native imports
 const fs = require("fs");
 const path = require("path");
+const https = require("https");
 
 //node imports
 const express = require("express");
 const bodyParser = require("body-parser");
+
+//SSL configuration
+let options = {
+  key: fs.readFileSync("mykey.pem"),
+  cert: fs.readFileSync("my-cert.pem"),
+  rejectUnauthorized: false,
+};
 
 //node configurations
 require("dotenv").config();
@@ -50,9 +58,10 @@ app.use("*", (req, res, next) => {
   return res.status(400).json({ message: "sorry bad request" });
 });
 
-let PORT = process.env.PORT || 8080; //server listens to the configured port else listen at port 8080
-app.listen(PORT, () => {
-  console.log(
-    `server listening on ${process.env.SERVER_URL || "http://127.0.0.1" + PORT}`
-  );
+let PORT = process.env.PORT || 8000;
+
+app.listen(PORT);
+
+https.createServer(options, app).listen(8080, () => {
+  console.log(`server running on ${PORT}`);
 });

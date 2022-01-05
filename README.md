@@ -87,6 +87,25 @@ app.use("*", (req, res, next) => {
 //2) We return a response with status code 400
 ```
 
+Implementing [TLS/SSL](https://www.openssl.org) using openssl <br>
+NB: you don't have to this, already done for you. But here is a run through of the whole process
+
+```bash
+openssl genrsa -out mykey.pem 1024
+```
+
+Generate the certficates
+
+```bash
+openssl req -new -key mykey.pem -out mykey-csr.pem
+```
+
+Generate self signed certificate using the key and the csr already generated
+
+```bash
+openssl x509 -req -in mykey-csr.pem -signkey mykey.pem -out my-cert.pem
+```
+
 ---
 
 ### Tasks:
@@ -95,5 +114,5 @@ app.use("*", (req, res, next) => {
 - [x] allow server to listen to a configurable port
 - [x] serve static or dynamic html
 - [x] ensure only headers accepted are Content-Type and Content-Length
-- [ ] Implement TLS (HTTPS) or a secure protocol of your choice to run over the server
+- [x] Implement TLS (HTTPS) or a secure protocol of your choice to run over the server
 - [ ] Add a feature for URL rewriting, such as mod_rewrite in Apache.
