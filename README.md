@@ -28,12 +28,14 @@ The server is constantly listening to incoming requests and figures out if the r
 WEBSERVER
 +----   node_modules
 │----   README.md
-│----   index.js
+│----   index.js (main server file)
 │----   .env
 │----   get.html
 │----   post.html
 │----   package.json
-│----   package-lock.json
+│----   my-cert.pem
+│----   mykey-csr.pem
+│----   mykey.pem
 ```
 
 <img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>[main.js](https://github.com/ryanmwakio/webserver/blob/master/index.js) <span style="color:grey">&nbsp;_This is where the server is running_</span><br/>
