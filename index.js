@@ -60,8 +60,6 @@ app.use("*", (req, res, next) => {
 
 let PORT = process.env.PORT || 8000;
 
-app.listen(PORT);
-
-https.createServer(options, app).listen(8080, () => {
+https.createServer(options, app).listen(PORT, () => {
   console.log(`server running on ${PORT}`);
 });
