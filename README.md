@@ -17,7 +17,7 @@ Everything is now set to run the server:
 npm start
 ```
 
-what the above does, is run an instance of the server. The server is running at the configured port in the case of hosting provider or if it's on a local machine the server is running on port :8080<br/><br/>
+what the above does, is run an instance of the server. The server is running at the configured port in the case of hosting provider or if it's on a local machine the server is running on port :8000<br/><br/>
 The server is constantly listening to incoming requests and figures out if the request is a GET or POST and responds with a html page. The html can be static or dynamic.<br/><br/>
 
 ---
@@ -39,7 +39,7 @@ WEBSERVER
 ```
 
 <img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>[main.js](https://github.com/ryanmwakio/webserver/blob/master/index.js) <span style="color:grey">&nbsp;_This is where the server is running_</span><br/>
-<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>.env <span style="color:grey">&nbsp;_some environment variables e.g SERVER_URL="http://127.0.0.1:8080"_</span><br><br>
+<img src="https://img.icons8.com/fluency/48/000000/file.png" alt="drawing" width="15"/>.env <span style="color:grey">&nbsp;_some environment variables e.g SERVER_URL="http://127.0.0.1:8000"_</span><br><br>
 
 ---
 
@@ -54,7 +54,7 @@ app.use("/", (req, res, next) => {
   }
   next();
 });
-//1) We are listening for a get request at the root "/" e.g http://127.0.0.1:8080/
+//1) We are listening for a get request at the root "/" e.g http://127.0.0.1:8000/
 //2) We set the Content-Type
 //3) We return a response, a html file
 //4) next()...Incase this is not the GET request e.g if the request is a POST, then we funnel it to the next request middleware
@@ -74,7 +74,7 @@ app.use("/", (req, res, next) => {
   }
   next();
 });
-//1) We are listening for a post request at the root "/" e.g http://127.0.0.1:8080/
+//1) We are listening for a post request at the root "/" e.g http://127.0.0.1:8000/
 //2) We set the Content-Type and Content-Length
 //3) We return a response, a html file
 //4) next()...Incase this is not the POST request e.g if the request is a PUT/PATCH/DELETE, then we funnel it to the next request middleware
