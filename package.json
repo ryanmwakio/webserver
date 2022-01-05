@@ -1,0 +1,16 @@
+{
+  "name": "pesapal_tests_webserver",
+  "version": "1.0.0",
+  "description": "webserver test solution with different http verbs being listened for",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "ryanmwakio6@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2"
+  }
+}
