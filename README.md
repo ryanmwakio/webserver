@@ -84,5 +84,16 @@ app.use("*", (req, res, next) => {
   return res.status(400).json({ message: "sorry bad request" });
 });
 //1) We are listening for any route or request that has not been processed
-//2) We return a response with status 400
+//2) We return a response with status code 400
 ```
+
+---
+
+### Tasks:
+
+- [x] create a web server
+- [x] allow server to listen to a configurable port
+- [x] serve static or dynamic html
+- [x] ensure only headers accepted are Content_Type and Content-Length
+- [] Implement TLS (HTTPS) or a secure protocol of your choice to run over the server
+- [] Add a feature for URL rewriting, such as mod_rewrite in Apache.
