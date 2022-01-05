@@ -94,6 +94,6 @@ app.use("*", (req, res, next) => {
 - [x] create a web server
 - [x] allow server to listen to a configurable port
 - [x] serve static or dynamic html
-- [x] ensure only headers accepted are Content_Type and Content-Length
+- [x] ensure only headers accepted are Content-Type and Content-Length
 - [ ] Implement TLS (HTTPS) or a secure protocol of your choice to run over the server
 - [ ] Add a feature for URL rewriting, such as mod_rewrite in Apache.
